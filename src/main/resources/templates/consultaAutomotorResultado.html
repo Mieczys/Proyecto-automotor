@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Resultados de la Consulta</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+  <h2>Resultados de la Consulta</h2>
+
+  <div class="mb-3">
+    <a class="btn btn-primary" th:href="@{/consultaAutomotor}" role="button">Nueva Consulta</a>
+    <button class="btn btn-secondary" onclick="location.reload(true)">Actualizar</button>
+  </div>
+
+  <div th:if="${not #lists.isEmpty(resultados)}">
+    <!-- Mostrar resultados si hay resultados -->
+    <table class="table table-bordered table-dark">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>I/N</th>
+        <th>Marca</th>
+        <th>Descripción</th>
+        <th>Tipo</th>
+        <th>2021</th>
+        <th>2020</th>
+        <th>2019</th>
+        <th>2018</th>
+        <th>2017</th>
+        <th>2016</th>
+        <th>2015</th>
+        <th>2014</th>
+        <th>2013</th>
+        <th>2012</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="automovil : ${resultados}">
+        <td><strong th:text="${automovil.id}"></strong></td>
+        <td th:text="${automovil.inColumn}"></td>
+        <td th:text="${automovil.marca}"></td>
+        <td th:text="${automovil.descripcion}"></td>
+        <td th:text="${automovil.tipo}"></td>
+        <td th:text="${automovil.anio2021}"></td>
+        <td th:text="${automovil.anio2020}"></td>
+        <td th:text="${automovil.anio2019}"></td>
+        <td th:text="${automovil.anio2018}"></td>
+        <td th:text="${automovil.anio2017}"></td>
+        <td th:text="${automovil.anio2016}"></td>
+        <td th:text="${automovil.anio2015}"></td>
+        <td th:text="${automovil.anio2014}"></td>
+        <td th:text="${automovil.anio2013}"></td>
+        <td th:text="${automovil.anio2012}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div th:if="${#lists.isEmpty(resultados)}">
+    <!-- Mostrar mensaje si no hay resultados -->
+    <p class="alert alert-warning" th:text="${mensaje}"></p>
+  </div>
+
+</div>
+
+</body>
+</html>
