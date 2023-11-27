@@ -20,7 +20,7 @@ automotor en particular, mediante el ingreso de algunos campos que permitan filt
 datos resultante puede ser de uno o más registros, se sugiere la utilización de alguna grilla para la visualización de
 los resultados.
 
-Se utilizó MySQL WORCKBENCH
+Se utilizó MySQL WORKBENCH
 
 Se realizó con una arquitectura
 Modelo-Vista-Controlador (MVC)
