@@ -21,7 +21,7 @@ datos resultante puede ser de uno o más registros, se sugiere la utilización d
 los resultados.
 
 Se utilizó MySQL WORKBENCH
-
+Inicializador: https://start.spring.io/
 Se realizó con una arquitectura
 Modelo-Vista-Controlador (MVC)
 Modelo: Representado por las clases de entidad como Automovil. Estas clases modelan la estructura de los datos y
